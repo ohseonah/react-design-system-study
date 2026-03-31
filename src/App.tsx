@@ -1,7 +1,9 @@
+import ButtonDemo from "./components/Button/Button.demo.tsx";
+
 const App = () => {
   return (
       <div>
-        여기!
+        <ButtonDemo />
       </div>
   );
 };
