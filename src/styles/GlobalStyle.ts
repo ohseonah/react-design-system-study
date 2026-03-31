@@ -1,6 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
+import {fontFaces} from "./fonts.ts";
 
 const GlobalStyle = createGlobalStyle`
+    /* font */
+    ${fontFaces}
+    
     /* Reset CSS */
     * {
         margin: 0;

@@ -3,20 +3,19 @@ import * as React from "react";
 
 export type ButtonVariant = 'solid' | 'outline' | 'ghost' | 'text';
 export type ButtonSize = 'large' | 'medium' | 'small' | 'tiny';
-export type ButtonTone = 'primary' | 'secondary';
+export type ButtonColor = 'primary' | 'secondary';
 export type ButtonRadius = 'pill' | 'curved' | 'soft' | 'square';
+export type ButtonIconLayout = 'inline' | 'between';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>{
   variant?: ButtonVariant;
   size?: ButtonSize;
-  tone?: ButtonTone;
+  color?: ButtonColor;
   radius?: ButtonRadius;
+  iconLayout?: ButtonIconLayout;
 
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
-  iconLayout?: 'inline' | 'between';
-
-  label?: string;
   children?: React.ReactNode;
 
   fullWidth?: boolean;
