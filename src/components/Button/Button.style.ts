@@ -260,5 +260,12 @@ export const _button_ButtonBase = styled.button<ButtonStyleProps>`
 
 export const _span_Label = styled.span<{$size: ButtonSize}>`
     white-space: nowrap;
-    font-size: ${({ $size }) => $size === 'large' ? '1.3rem' : $size === 'tiny' ? '1rem' : '1.2rem'};
+    font-size: ${({ $size }) =>
+    $size === 'large'
+      ? '1.6rem'
+      : $size === 'medium'
+      ? '1.4rem'
+      : $size === 'tiny'
+        ? '1rem'
+        : '1.2rem'};
 `;

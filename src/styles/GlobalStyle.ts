@@ -20,7 +20,6 @@ const GlobalStyle = createGlobalStyle`
     html, body {
         width: 100%;
         height: 100%;
-        font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
     }
 
     a {
@@ -31,7 +30,14 @@ const GlobalStyle = createGlobalStyle`
     ul, li {
         list-style: none;
     }
-
+    
+    button,
+    input,
+    textarea,
+    select {
+        font: inherit;
+    }
+    
     button {
         cursor: pointer;
         border: none;
@@ -43,6 +49,7 @@ const GlobalStyle = createGlobalStyle`
         background-color: #fff; /* 예시: 배경색 지정 */
         color: #333;
         line-height: 1.5;
+        font-family: 'GoogleSans', sans-serif;
         font-size: 1.6rem;
     }
 `;

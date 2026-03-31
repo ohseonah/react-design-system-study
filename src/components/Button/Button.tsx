@@ -10,10 +10,7 @@ const Button = ({
     radius='square',
     iconLayout='inline',
     fullWidth=false,
-    children,
-    leftIcon,
-    rightIcon,
-    ...rest }:ButtonProps) => {
+    ...p}:ButtonProps) => {
   return (
       <>
         <_button_ButtonBase
@@ -24,11 +21,11 @@ const Button = ({
             $radius={radius}
             $fullWidth={fullWidth}
             $iconLayout={iconLayout}
-            {...rest}
+            {...p}
         >
-          {leftIcon && <span>{leftIcon}</span>}
-          {children && <_span_Label $size={size}>{children}</_span_Label>}
-          {rightIcon && <span>{rightIcon}</span>}
+          {p.leftIcon && <span>{p.leftIcon}</span>}
+          {p.children && <_span_Label $size={size}>{p.children}</_span_Label>}
+          {p.rightIcon && <span>{p.rightIcon}</span>}
         </_button_ButtonBase>
       </>
   );
