@@ -1,4 +1,4 @@
-//Button.types.ts
+//button.types.ts
 import * as React from "react";
 
 export type ButtonVariant = 'solid' | 'outline' | 'ghost' | 'text';
@@ -18,6 +18,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   rightIcon?: React.ReactNode;
   children?: React.ReactNode;
 
+  isLoading?: boolean;
   fullWidth?: boolean;
 }
 

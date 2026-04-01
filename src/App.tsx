@@ -1,4 +1,4 @@
-import ButtonDemo from "./components/Button/Button.demo.tsx";
+import ButtonDemo from "./components/button/Button.demo.tsx";
 
 const App = () => {
   return (

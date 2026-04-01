@@ -1,4 +1,4 @@
-// Button.style.ts
+// button.style.ts
 import styled, {css} from "styled-components";
 import type {ButtonColor, ButtonIconLayout, ButtonRadius, ButtonSize, ButtonVariant} from "./Button.types.ts";
 
@@ -9,6 +9,7 @@ interface ButtonStyleProps {
   $radius: ButtonRadius;
   $iconLayout: ButtonIconLayout;
   $fullWidth: boolean;
+  $isLoading: boolean;
 }
 
 /* button size */
@@ -258,14 +259,22 @@ export const _button_ButtonBase = styled.button<ButtonStyleProps>`
   cursor: pointer;
 `;
 
+/* button text size */
+const labelFontSize = {
+  large: '1.6rem',
+  medium: '1.4rem',
+  small: '1.2rem',
+  tiny: '1rem',
+}
+
 export const _span_Label = styled.span<{$size: ButtonSize}>`
     white-space: nowrap;
-    font-size: ${({ $size }) =>
-    $size === 'large'
-      ? '1.6rem'
-      : $size === 'medium'
-      ? '1.4rem'
-      : $size === 'tiny'
-        ? '1rem'
-        : '1.2rem'};
+    font-size: ${({ $size }) => labelFontSize[$size]};
+`;
+
+export const _span_Icon = styled.span`
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 `;

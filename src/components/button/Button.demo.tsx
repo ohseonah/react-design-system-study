@@ -22,10 +22,10 @@ const ButtonDemo = () => {
           <Button radius='pill'>Button</Button>
         </div>
         {/*<div style={{display: 'flex', gap: '1rem', alignItems: 'center' ,marginBottom: '1rem'}}>*/}
-        {/*  <Button leftIcon={<Icon name="arrow-left-o" />}>Button</Button>*/}
-        {/*  <Button>Button</Button>*/}
-        {/*  <Button>Button</Button>*/}
-        {/*  <Button>Button</Button>*/}
+        {/*  <button leftIcon={<Icon name="arrow-left-o" />}>button</button>*/}
+        {/*  <button>button</button>*/}
+        {/*  <button>button</button>*/}
+        {/*  <button>button</button>*/}
         {/*</div>*/}
       </div>
   );
