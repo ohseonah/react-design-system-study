@@ -14,6 +14,8 @@ const Button = ({
     fullWidth=false,
     isLoading=false,
     disabled,
+    leftIconProps,
+    rightIconProps,
     ...p}:ButtonProps) => {
   return (
         <_button_ButtonBase
@@ -28,14 +30,14 @@ const Button = ({
             $isLoading={isLoading}
             {...p}
         >
-          {p.leftIcon && <Icon name={p.leftIcon} />}
+          {p.leftIcon && <Icon name={p.leftIcon} {...leftIconProps} />}
           {p.children && (
               <_span_Label $size={size}>
                 {isLoading ? <Spinner /> : p.children}
               </_span_Label>
           )}
           {/*{p.children && <_span_Label $size={size}>{p.children} {isLoading && <span>Loading Test</span>}</_span_Label>}*/}
-          {p.rightIcon && <Icon name={p.rightIcon} />}
+          {p.rightIcon && <Icon name={p.rightIcon} {...rightIconProps} />}
         </_button_ButtonBase>
   );
 };

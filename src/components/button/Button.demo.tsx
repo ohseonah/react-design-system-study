@@ -22,10 +22,10 @@ const ButtonDemo = () => {
           <Button radius='pill'>Button</Button>
         </div>
         <div style={{display: 'flex', gap: '1rem', alignItems: 'center' ,marginBottom: '1rem'}}>
-          <Button leftIcon='arrow'>button</Button>
-          <Button>button</Button>
-          <Button>button</Button>
-          <Button>button</Button>
+          <Button leftIcon='arrow' leftIconProps={{size:'sm', tone:'white'}}>button</Button>
+          <Button leftIcon='arrow' leftIconProps={{size:'sm', tone:'white'}} iconLayout='between'>button</Button>
+          <Button leftIcon='arrow' leftIconProps={{size:'sm', tone:'white'}}>button</Button>
+          <Button leftIcon='arrow' leftIconProps={{size:'sm', tone:'white'}} iconLayout='between'>button</Button>
         </div>
       </div>
   );

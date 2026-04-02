@@ -12,6 +12,7 @@ const ICON_SIZE_MAP: Record<IconSize, number> = {
 const ICON_TONE_MAP: Record<IconTone, string> = {
   default: '#333',
   gray: '#999',
+  white: '#fff',
   current: 'currentColor',
 };
 

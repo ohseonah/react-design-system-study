@@ -12,23 +12,62 @@ interface ButtonStyleProps {
   $isLoading: boolean;
 }
 
-/* button size */
-const sizeStyle = {
+/* button height size */
+const sizeHeightStyle = {
   large : css`
     height: 5.6rem;
-    padding: 0 5.2rem;
   `,
   medium : css`
     height: 4.8rem;
-    padding: 0 4.7rem;
   `,
   small : css`
     height: 4rem;
-    padding: 0 3.9rem;
   `,
   tiny : css`
     height: 3rem;
-    padding: 0 2.7rem;
+  `,
+}
+
+/* button min width size */
+const minWidthStyle = {
+  inline: {
+    large: css`min-width: 12rem;`,
+    medium: css`min-width: 10rem;`,
+    small: css`min-width: 8rem;`,
+    tiny: css`min-width: 6rem;`,
+  },
+  between: {
+    large: css`min-width: 16rem;`,
+    medium: css`min-width: 14rem;`,
+    small: css`min-width: 12rem;`,
+    tiny: css`min-width: 10rem;`,
+  },
+};
+
+/* button padding ( size + layout ) */
+const paddingStyle = {
+  inline: {
+    large: css`padding: 0 5.2rem`,
+    medium: css`padding: 0 4.7rem`,
+    small: css`padding: 0 3.9rem`,
+    tiny: css`padding: 0 2.7rem`,
+  },
+  between:  {
+    large: css`padding: 0 2.5rem`,
+    medium: css`padding: 0 2rem`,
+    small: css`padding: 0 1.2rem`,
+    tiny: css`padding: 0 1rem`,
+  },
+}
+
+/* button layout */
+const iconLayoutStyle = {
+  inline : css`
+    justify-content: center;
+    gap: 0.6rem;
+  `,
+  between : css`
+    justify-content: space-between;
   `,
 }
 
@@ -239,23 +278,24 @@ const radiusStyle = {
   square : css`border-radius: 0`,
 }
 
-/* button layout */
-const iconLayoutStyle = {
-  inline : css``,
-  between : css``,
-}
-
 export const _button_ButtonBase = styled.button<ButtonStyleProps>`
-  ${({ $size }) => sizeStyle[$size]};
-  ${({ $variant, $color }) => variantStyle[$variant][$color]};
-  ${({ $radius }) => radiusStyle[$radius]};
+  /* structure */
+  ${({ $size }) => sizeHeightStyle[$size]};
+  ${({ $size, $iconLayout }) => paddingStyle[$iconLayout][$size]};
+  ${({ $size, $iconLayout }) => minWidthStyle[$iconLayout][$size]};
   ${({ $iconLayout }) => iconLayoutStyle[$iconLayout]};
     
+  /* appearance */
+  ${({ $variant, $color }) => variantStyle[$variant][$color]};
+  ${({ $radius }) => radiusStyle[$radius]};
+   
+  /* width */
   ${({ $fullWidth }) => $fullWidth && css`width: 100%;`}
   
   display: inline-flex;
   align-items: center;
   box-sizing: border-box;
+  position: relative;
   cursor: pointer;
 `;
 
