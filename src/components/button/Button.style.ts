@@ -271,10 +271,3 @@ export const _span_Label = styled.span<{$size: ButtonSize}>`
     white-space: nowrap;
     font-size: ${({ $size }) => labelFontSize[$size]};
 `;
-
-export const _span_Icon = styled.span`
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-`;

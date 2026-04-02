@@ -21,12 +21,12 @@ const ButtonDemo = () => {
           <Button radius='curved'>Button</Button>
           <Button radius='pill'>Button</Button>
         </div>
-        {/*<div style={{display: 'flex', gap: '1rem', alignItems: 'center' ,marginBottom: '1rem'}}>*/}
-        {/*  <button leftIcon={<Icon name="arrow-left-o" />}>button</button>*/}
-        {/*  <button>button</button>*/}
-        {/*  <button>button</button>*/}
-        {/*  <button>button</button>*/}
-        {/*</div>*/}
+        <div style={{display: 'flex', gap: '1rem', alignItems: 'center' ,marginBottom: '1rem'}}>
+          <Button leftIcon='arrow'>button</Button>
+          <Button>button</Button>
+          <Button>button</Button>
+          <Button>button</Button>
+        </div>
       </div>
   );
 };

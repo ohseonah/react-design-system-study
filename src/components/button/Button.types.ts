@@ -1,5 +1,6 @@
 //button.types.ts
 import * as React from "react";
+import type {IconName} from "../icons/iconMap.ts";
 
 export type ButtonVariant = 'solid' | 'outline' | 'ghost' | 'text';
 export type ButtonSize = 'large' | 'medium' | 'small' | 'tiny';
@@ -14,8 +15,8 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   radius?: ButtonRadius;
   iconLayout?: ButtonIconLayout;
 
-  leftIcon?: React.ReactNode;
-  rightIcon?: React.ReactNode;
+  leftIcon?: IconName;
+  rightIcon?:IconName;
   children?: React.ReactNode;
 
   isLoading?: boolean;

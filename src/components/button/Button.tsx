@@ -1,7 +1,8 @@
 // button.tsx
-import {_button_ButtonBase, _span_Icon, _span_Label} from "./Button.style.ts";
+import {_button_ButtonBase, _span_Label} from "./Button.style.ts";
 import type {ButtonProps} from "./Button.types.ts";
 import Spinner from "../loading/Spinner.tsx";
+import Icon from "../icons/Icon.tsx";
 
 const Button = ({
     type='button',
@@ -27,14 +28,14 @@ const Button = ({
             $isLoading={isLoading}
             {...p}
         >
-          {p.leftIcon && <_span_Icon>{p.leftIcon}</_span_Icon>}
+          {p.leftIcon && <Icon name={p.leftIcon} />}
           {p.children && (
               <_span_Label $size={size}>
                 {isLoading ? <Spinner /> : p.children}
               </_span_Label>
           )}
           {/*{p.children && <_span_Label $size={size}>{p.children} {isLoading && <span>Loading Test</span>}</_span_Label>}*/}
-          {p.rightIcon && <_span_Icon>{p.rightIcon}</_span_Icon>}
+          {p.rightIcon && <Icon name={p.rightIcon} />}
         </_button_ButtonBase>
   );
 };
