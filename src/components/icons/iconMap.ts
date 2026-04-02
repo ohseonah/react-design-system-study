@@ -1,6 +1,6 @@
 // iconMap.ts
-import ArrowLeftO from "@/assets/icons/arrow-left-o.svg?react";
-import Search from "@/assets/icons/search.svg?react"
+import ArrowLeftO from "@/assets/svg/arrow-left-o.svg?react";
+import Search from "@/assets/svg/search.svg?react"
 
 export const iconMap = {
   arrow: ArrowLeftO,
