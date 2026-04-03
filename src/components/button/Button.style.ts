@@ -47,10 +47,10 @@ const minWidthStyle = {
 /* button padding ( size + layout ) */
 const paddingStyle = {
   inline: {
-    large: css`padding: 0 5.2rem`,
-    medium: css`padding: 0 4.7rem`,
-    small: css`padding: 0 3.9rem`,
-    tiny: css`padding: 0 2.7rem`,
+    large: css`padding: 0 5rem`,
+    medium: css`padding: 0 4.5rem`,
+    small: css`padding: 0 3.7rem`,
+    tiny: css`padding: 0 2.5rem`,
   },
   between:  {
     large: css`padding: 0 2.5rem`,
@@ -145,8 +145,9 @@ const variantStyle = {
       border: 1px solid ${toneColor.primary.main};
 
       &:hover:not(:disabled) {
-        color: ${toneColor.primary.hover};
+        color: ${toneColor.primary.onSolid};
         border-color: ${toneColor.primary.hover};
+        background-color: ${toneColor.primary.main};
       }
 
       &:active:not(:disabled) {
@@ -167,8 +168,9 @@ const variantStyle = {
       border: 1px solid ${toneColor.secondary.main};
 
       &:hover:not(:disabled) {
-        color: ${toneColor.secondary.hover};
+        color: ${toneColor.secondary.onSolid};
         border-color: ${toneColor.secondary.hover};
+        background-color: ${toneColor.secondary.main};
       }
 
       &:active:not(:disabled) {

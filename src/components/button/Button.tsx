@@ -13,7 +13,10 @@ const Button = ({
     iconLayout='inline',
     fullWidth=false,
     isLoading=false,
+    children,
     disabled,
+    leftIcon,
+    rightIcon,
     leftIconProps,
     rightIconProps,
     ...p}:ButtonProps) => {
@@ -30,14 +33,14 @@ const Button = ({
             $isLoading={isLoading}
             {...p}
         >
-          {p.leftIcon && <Icon name={p.leftIcon} {...leftIconProps} />}
-          {p.children && (
+          {leftIcon && <Icon name={leftIcon} {...leftIconProps} />}
+          {children && (
               <_span_Label $size={size}>
-                {isLoading ? <Spinner /> : p.children}
+                {isLoading ? <Spinner /> : children}
               </_span_Label>
           )}
           {/*{p.children && <_span_Label $size={size}>{p.children} {isLoading && <span>Loading Test</span>}</_span_Label>}*/}
-          {p.rightIcon && <Icon name={p.rightIcon} {...rightIconProps} />}
+          {rightIcon && <Icon name={rightIcon} {...rightIconProps} />}
         </_button_ButtonBase>
   );
 };
