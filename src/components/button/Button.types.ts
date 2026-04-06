@@ -1,7 +1,6 @@
 //button.types.ts
 import * as React from "react";
-import type {IconName} from "../icons/iconMap.ts";
-import type {IconProps} from "../icons/Icon.types.ts";
+import type {IconName, IconProps} from "../icons/Icon.types.ts";
 
 export type ButtonVariant = 'solid' | 'outline' | 'ghost' | 'text';
 export type ButtonSize = 'large' | 'medium' | 'small' | 'tiny';
