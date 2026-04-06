@@ -311,5 +311,7 @@ const labelFontSize = {
 
 export const _span_Label = styled.span<{$size: ButtonSize}>`
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-size: ${({ $size }) => labelFontSize[$size]};
 `;
